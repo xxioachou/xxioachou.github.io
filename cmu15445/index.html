@@ -6,15 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://xxioachou.github.io">
-  <title>Archives: 2025 | xxioachou 的个人博客</title>
+  <title>CMU15445 | xxioachou 的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="xxioachou 的个人博客">
-<meta property="og:url" content="http://xxioachou.github.io/archives/2025/index.html">
+  <meta name="description" content="记录 CMU15445 通关全流程（未完待续） Bustub 是一个使用 C++ 实现的关系型数据库管理系统，支持基本的sql 语句，涵盖了内存管理、b+树索引、算子和优化器以及MVCC并发控制等内容。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CMU15445">
+<meta property="og:url" content="http://xxioachou.github.io/cmu15445/index.html">
 <meta property="og:site_name" content="xxioachou 的个人博客">
+<meta property="og:description" content="记录 CMU15445 通关全流程（未完待续） Bustub 是一个使用 C++ 实现的关系型数据库管理系统，支持基本的sql 语句，涵盖了内存管理、b+树索引、算子和优化器以及MVCC并发控制等内容。">
 <meta property="og:locale">
+<meta property="og:image" content="http://xxioachou.github.io/img/cmu15445/p0.png">
+<meta property="article:published_time" content="2025-03-08T17:07:31.000Z">
+<meta property="article:modified_time" content="2025-03-08T17:16:19.868Z">
 <meta property="article:author" content="xxioachou">
+<meta property="article:tag" content="C++">
+<meta property="article:tag" content="数据库">
+<meta property="article:tag" content="CMU15445">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://xxioachou.github.io/img/cmu15445/p0.png">
   
     <link rel="alternative" href="/atom.xml" title="xxioachou 的个人博客" type="application/atom+xml">
   
@@ -136,36 +145,64 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-cmu15445" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2025" class="archive-year">2025</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/cmu15445/" class="archive-article-date">
-  	<time datetime="2025-03-08T17:07:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-03-09</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/cmu15445/">CMU15445</a>
+    <h1 class="article-title" itemprop="name">
+      CMU15445
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/cmu15445/" class="archive-article-date">
+  	<time datetime="2025-03-08T17:07:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-03-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="记录-CMU15445-通关全流程（未完待续）"><a href="#记录-CMU15445-通关全流程（未完待续）" class="headerlink" title="记录 CMU15445 通关全流程（未完待续）"></a>记录 CMU15445 通关全流程（未完待续）</h1><blockquote>
+<p>Bustub 是一个使用 C++ 实现的关系型数据库管理系统，支持基本的sql 语句，涵盖了内存管理、b+树索引、算子和优化器以及MVCC并发控制等内容。</p>
+</blockquote>
+<span id="more"></span>
+<h2 id="Project-0-C-Primer"><a href="#Project-0-C-Primer" class="headerlink" title="Project #0 - C++ Primer"></a>Project #0 - C++ Primer</h2><p><a target="_blank" rel="noopener" href="https://15445.courses.cs.cmu.edu/fall2024/project0/">project0 的课程网址</a></p>
+<p>课程的第一个项目，如果没办法独立完成的话说明 C++ 基础知识不够扎实…</p>
+<h3 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h3><p>环境为 Linux Ubuntu 22.04，见 bustub 的 <a target="_blank" rel="noopener" href="https://github.com/cmu-db/bustub">github 仓库</a>，运行 <code>build_support/packages.sh</code> 这个脚本文件即可搞定。</p>
+<h3 id="project-0-概览"><a href="#project-0-概览" class="headerlink" title="project 0 概览"></a>project 0 概览</h3><p>HyperLogLog(HLL) 是一个用来做基数统计的算法，适用于大数据场景中统计集合中不同元素的数量。在 project 0 中你需要分别用两种不同的方法实现这个算法，分别对应 Task 1 和 Task 2。这个 project 比较简单，可以很快通过。</p>
+<h3 id="通过所有测试"><a href="#通过所有测试" class="headerlink" title="通过所有测试"></a>通过所有测试</h3><p><img src="/img/cmu15445/p0.png" alt="project 0 通过所有测试"></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -185,84 +222,119 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://xxioachou.github.io/cmu15445/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/my-first-blog/" class="archive-article-date">
-  	<time datetime="2025-03-08T13:51:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-03-08</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/my-first-blog/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">我的第一个博客</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/my-first-blog/">我的第一个博客</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AE%B0%E5%BD%95-CMU15445-%E9%80%9A%E5%85%B3%E5%85%A8%E6%B5%81%E7%A8%8B%EF%BC%88%E6%9C%AA%E5%AE%8C%E5%BE%85%E7%BB%AD%EF%BC%89"><span class="toc-number">1.</span> <span class="toc-text">记录 CMU15445 通关全流程（未完待续）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Project-0-C-Primer"><span class="toc-number">1.1.</span> <span class="toc-text">Project #0 - C++ Primer</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"><span class="toc-number">1.1.1.</span> <span class="toc-text">环境搭建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#project-0-%E6%A6%82%E8%A7%88"><span class="toc-number">1.1.2.</span> <span class="toc-text">project 0 概览</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%9A%E8%BF%87%E6%89%80%E6%9C%89%E6%B5%8B%E8%AF%95"><span class="toc-number">1.1.3.</span> <span class="toc-text">通过所有测试</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/hello-world/" class="archive-article-date">
-  	<time datetime="2025-03-08T13:31:55.711Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-03-08</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -285,8 +357,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
